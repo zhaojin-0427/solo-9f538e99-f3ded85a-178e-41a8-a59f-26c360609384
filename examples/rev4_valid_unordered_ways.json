@@ -1,0 +1,15 @@
+{
+  "revision": 4,
+  "nodes": [
+    {"id": 1, "lat": 0.0, "lon": 0.0},
+    {"id": 2, "lat": 0.0, "lon": 1.0},
+    {"id": 3, "lat": 1.0, "lon": 1.0},
+    {"id": 4, "lat": 1.0, "lon": 0.0}
+  ],
+  "ways": [
+    {"id": 11, "role": "outer", "node_refs": [2, 3]},
+    {"id": 12, "role": "outer", "node_refs": [1, 4]},
+    {"id": 13, "role": "outer", "node_refs": [4, 3]},
+    {"id": 14, "role": "outer", "node_refs": [1, 2]}
+  ]
+}

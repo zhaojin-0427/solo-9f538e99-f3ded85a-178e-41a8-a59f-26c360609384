@@ -1,0 +1,20 @@
+services:
+  flood-api:
+    build: .
+    image: flood-water-api:latest
+    container_name: flood-water-api
+    ports:
+      - "8000:8000"
+    environment:
+      FLOOD_DB_PATH: /data/flood.db
+    volumes:
+      - flood-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  flood-data:
